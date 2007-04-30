@@ -9,7 +9,7 @@ URL: http://mfcn.ilo.de/netspeed_applet
 Source0: http://www.wh-hms.uni-ulm.de/~mfcn/netspeed/packages/netspeed_applet-%{version}.tar.bz2
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 BuildRequires: pkgconfig, gettext, scrollkeeper, intltool
-BuildRequires: perl-XML-Parser
+BuildRequires: perl-XML-Parse, gnome-doc-utils
 BuildRequires: libgnomeui2-devel >= 2.8, libgtop2.0-devel
 BuildRequires: gnome-panel-devel >= 2.8, libnotify-devel
 Requires(post): scrollkeeper
