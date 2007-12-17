@@ -7,7 +7,6 @@ Group: Graphical desktop/GNOME
 License: GPL   
 URL: http://mfcn.ilo.de/netspeed_applet
 Source0: http://www.wh-hms.uni-ulm.de/~mfcn/netspeed/packages/netspeed_applet-%{version}.tar.bz2
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 BuildRequires: pkgconfig, gettext, scrollkeeper, intltool
 BuildRequires: perl-XML-Parser, gnome-doc-utils
 BuildRequires: libgnomeui2-devel >= 2.8, libgtop2.0-devel
