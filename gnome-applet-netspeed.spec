@@ -7,6 +7,7 @@ Group: Graphical desktop/GNOME
 License: GPL   
 URL: http://mfcn.ilo.de/netspeed_applet
 Source0: http://www.wh-hms.uni-ulm.de/~mfcn/netspeed/packages/netspeed_applet-%{version}.tar.bz2
+Patch0: netspeed_applet-0.14-fix-str-fmt.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 BuildRequires: pkgconfig, gettext, scrollkeeper, intltool
 BuildRequires: perl-XML-Parser, gnome-doc-utils
@@ -23,6 +24,7 @@ specified network device (for example eth0) in kbytes/s.
 
 %prep
 %setup -q -n netspeed_applet-%{version}
+%patch0 -p0
 
 %build
 %configure2_5x --disable-scrollkeeper
@@ -47,7 +49,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,-)
 %doc AUTHORS ChangeLog COPYING README TODO
 %doc %{_datadir}/gnome/help/netspeed_applet/
-%{_libexecdir}/*
+%{_libexecdir}/netspeed_applet2
 %{_libdir}/bonobo/servers/*
 %{_datadir}/pixmaps/*
 %{_datadir}/omf/netspeed_applet/
