@@ -1,13 +1,12 @@
 Name: gnome-applet-netspeed    
-Version: 0.14
-Release: %mkrel 5
+Version: 0.16
+Release: %mkrel 1
 Summary: GNOME applet that shows traffic on a network device
 
 Group: Graphical desktop/GNOME
 License: GPL   
-URL: http://mfcn.ilo.de/netspeed_applet
-Source0: http://www.wh-hms.uni-ulm.de/~mfcn/netspeed/packages/netspeed_applet-%{version}.tar.bz2
-Patch0: netspeed_applet-0.14-fix-str-fmt.patch
+URL: http://projects.gnome.org/netspeed/
+Source0: http://launchpadlibrarian.net/49741506/netspeed_applet-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 BuildRequires: pkgconfig, gettext, scrollkeeper, intltool
 BuildRequires: perl-XML-Parser, gnome-doc-utils
@@ -24,7 +23,6 @@ specified network device (for example eth0) in kbytes/s.
 
 %prep
 %setup -q -n netspeed_applet-%{version}
-%patch0 -p0
 
 %build
 %configure2_5x --disable-scrollkeeper
@@ -51,5 +49,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc %{_datadir}/gnome/help/netspeed_applet/
 %{_libexecdir}/netspeed_applet2
 %{_libdir}/bonobo/servers/*
-%{_datadir}/pixmaps/*
+%{_iconsdir}/hicolor/*/*/*
 %{_datadir}/omf/netspeed_applet/
