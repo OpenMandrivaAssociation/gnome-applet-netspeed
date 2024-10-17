@@ -5,7 +5,7 @@ Summary: GNOME applet that shows traffic on a network device
 
 Group: Graphical desktop/GNOME
 License: GPL   
-URL: http://projects.gnome.org/netspeed/
+URL: https://projects.gnome.org/netspeed/
 Source0: http://launchpadlibrarian.net/49741506/netspeed_applet-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 BuildRequires: pkgconfig, gettext, scrollkeeper, intltool
