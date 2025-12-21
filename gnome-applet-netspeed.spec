@@ -8,6 +8,11 @@ License: GPL
 URL: https://projects.gnome.org/netspeed/
 Source0: http://launchpadlibrarian.net/49741506/netspeed_applet-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: pkgconfig, gettext, scrollkeeper, intltool
 BuildRequires: perl-XML-Parser, gnome-doc-utils
 BuildRequires: libgnomeui2-devel >= 2.8, libgtop2.0-devel
