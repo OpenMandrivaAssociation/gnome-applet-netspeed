@@ -1,6 +1,6 @@
 Name: gnome-applet-netspeed    
 Version: 0.16
-Release: %mkrel 1
+Release: 2
 Summary: GNOME applet that shows traffic on a network device
 
 Group: Graphical desktop/GNOME
